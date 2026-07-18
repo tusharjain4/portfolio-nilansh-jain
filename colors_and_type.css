@@ -4,10 +4,9 @@
    Brand: adizen.ai
    ============================================================ */
 
-/* Secondary families (NOT uploaded — used minimally in the deck;
-   served from Google Fonts CDN): Lato (one agenda heading) and
-   IBM Plex Serif (section-break italic accent). */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,500&family=Lato:wght@400;700&display=swap");
+/* Lato + IBM Plex Serif were previously pulled from the Google Fonts CDN but are
+   unused by the effective tokens — removed so the deployed site carries no
+   external font dependency. */
 
 /* ---------- FunnelDisplay (display / headlines) ---------- */
 @font-face {
@@ -49,6 +48,36 @@
   font-family: "Funnel Display";
   src: url("fonts/FunnelDisplay-ExtraBold.ttf") format("truetype");
   font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Geist (display / headlines — sleek grotesque) ---------- */
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/Geist-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/Geist-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/Geist-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/Geist-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -106,7 +135,7 @@
 
 :root {
   /* ---------- Font families ---------- */
-  --font-display: "Funnel Display", system-ui, sans-serif;   /* headlines, titles, labels */
+  --font-display: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif; /* headlines, titles, labels */
   --font-body: "Manrope", system-ui, -apple-system, sans-serif; /* body, UI, subheads */
   --font-serif: "IBM Plex Serif", Georgia, serif;            /* section-break accent only */
   --font-alt: "Lato", system-ui, sans-serif;                 /* occasional agenda heading */
